@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" /> <title>AI Code Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>AI Code Generator</h1>
+    <form id="codeForm">
+      <label for="prompt">Enter your coding task:</label>
+      <textarea id="prompt" name="prompt" required></textarea>
+      <button type="submit">Generate Code</button>
+    </form>
+    <h2>Generated Code:</h2>
+    <pre id="output">...</pre>
+  </div>
+  <script>
+    const form = document.getElementById('codeForm');
+    const output = document.getElementById('output');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData(form);
+      output.textContent = "Generating...";
+
+      try {
+        const response = await fetch("/generate", {
+          method: "POST",
+          body: formData
+        });
+        const data = await response.json();
+        output.textContent = data.code || "No code generated.";
+      } catch (err) {
+        output.textContent = "Error generating code.";
+        console.error(err);
+      }
+    });
+  </script>
+</body>
+</html>

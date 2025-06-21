@@ -1,0 +1,32 @@
+# Ignore model files
+models/
+!models/.gitkeep  # Uncomment if you want to keep the folder in repo without files
+
+# Optional: ignore other heavy model-related files
+*.safetensors
+*.bin
+*.pt
+*.onnx
+*.ckpt
+*.h5
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# VSCode project settings (optional)
+.vscode/
+
+# Virtual environments (optional)
+venv/
+.env/
+.env.bak/
+*.env
+
+# Mac and Windows system files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
