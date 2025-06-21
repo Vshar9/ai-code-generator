@@ -1,8 +1,8 @@
-# 🧠 AI Code Generator
+# AI Code Generator
 
 A lightweight Flask-based web app that generates Python code from natural language prompts using the `deepseek-coder-1.3b` model.
 
-## 🚀 Features
+## Features
 
 - Clean and minimal web UI
 - Generates Python code using Hugging Face Transformers
@@ -10,7 +10,7 @@ A lightweight Flask-based web app that generates Python code from natural langua
 - Extracts only code output (no extra explanations)
 - Works offline after model download
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 intern-project/
@@ -25,12 +25,12 @@ intern-project/
 │   └── styles.css          # Basic styles
 ```
 
-## 🛠️ Setup Instructions
+## Setup Instructions
 
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Vshar9/ai-code-generator
 cd intern-project
 ```
 
@@ -38,7 +38,7 @@ cd intern-project
 
 ```bash
 python -m venv venv
-venv\Scripts\activate    # On Windows
+venv\Scripts\activate    
 ```
 
 ### 3. Install Requirements
@@ -49,10 +49,7 @@ pip install -r requirements.txt
 
 ### 4. Download the Model
 
-Manually download `deepseek-coder-1.3b` from:  
-https://huggingface.co/deepseek-ai/deepseek-coder-1.3b
-
-Place it in:
+Run downloader-script.py
 
 ```
 ./models/deepseek-coder-1.3b/
